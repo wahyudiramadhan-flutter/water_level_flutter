@@ -51,6 +51,7 @@ class _RealtimeDataScreenState extends State<RealtimeDataScreen> {
 
   @override
   Widget build(BuildContext context) {
+    var waterResult = double.parse(_waterLevel) * 100;
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.grey.shade900,
@@ -91,7 +92,7 @@ class _RealtimeDataScreenState extends State<RealtimeDataScreen> {
                   borderRadius: 12.0,
                   direction: Axis
                       .vertical, // The direction the liquid moves (Axis.vertical = bottom to top, Axis.horizontal = left to right). Defaults to Axis.horizontal.
-                  center: Text("${double.parse(_waterLevel) * 100} %"),
+                  center: Text("${waterResult.round()} %"),
                 ),
               ),
       ),

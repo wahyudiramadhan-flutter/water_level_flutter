@@ -17,14 +17,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.10.0"
-  at_viz:
-    dependency: "direct main"
-    description:
-      name: at_viz
-      sha256: "1fc31dc40502b8e68a5bd6bc73eeeea5b5547525831281eb0643c8918c13a2cc"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.0.2"
   boolean_selector:
     dependency: transitive
     description:
@@ -184,6 +176,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.1"
+  liquid_progress_indicator:
+    dependency: "direct main"
+    description:
+      name: liquid_progress_indicator
+      sha256: ffd7eca3995e03ce0bd0e1f10ce11da3d8877c51e1270d1e8b9556dbbbbe6689
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.4.0"
   matcher:
     dependency: transitive
     description:
@@ -224,14 +224,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.8.2"
-  path_parsing:
-    dependency: transitive
-    description:
-      name: path_parsing
-      sha256: e3e67b1629e6f7e8100b367d3db6ba6af4b1f0bb80f64db18ef1fbabd2fa9ccf
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.0.1"
   plugin_platform_interface:
     dependency: transitive
     description:
@@ -301,14 +293,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.4"
-  water_bottle:
-    dependency: "direct main"
-    description:
-      name: water_bottle
-      sha256: "5b3692d9249b8cfe549ce03d8b3be51290d134aab2ce7d9c1f2cd73b926415db"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.0.7"
 sdks:
   dart: ">=2.19.2 <3.0.0"
   flutter: ">=3.3.0"

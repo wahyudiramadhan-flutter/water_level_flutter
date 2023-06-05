@@ -1,10 +1,11 @@
+// ignore_for_file: use_key_in_widget_constructors
+
 import 'dart:async';
-import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:at_viz/at_viz.dart';
 import 'package:neumorphic_button/neumorphic_button.dart';
+import 'package:liquid_progress_indicator/liquid_progress_indicator.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -64,8 +65,8 @@ class _RealtimeDataScreenState extends State<RealtimeDataScreen> {
                 child: CircularProgressIndicator(),
               )
             : NeumorphicButton(
-                width: MediaQuery.of(context).size.width * .9,
-                height: MediaQuery.of(context).size.width * .9,
+                width: MediaQuery.of(context).size.width * .95,
+                height: MediaQuery.of(context).size.height * 9,
                 onTap: () {},
                 borderRadius: 12,
                 bottomRightShadowBlurRadius: 15,
@@ -79,25 +80,18 @@ class _RealtimeDataScreenState extends State<RealtimeDataScreen> {
                 padding: const EdgeInsets.all(50),
                 bottomRightOffset: const Offset(4, 4),
                 topLeftOffset: const Offset(-4, -4),
-                child: SimpleRadialGauge(
-                  actualValue: double.parse(_waterLevel),
-                  maxValue: 595,
-                  minValue: 0,
-                  title: const Text(
-                    'WaterLevel Indicator',
-                    style: TextStyle(fontStyle: FontStyle.italic),
-                  ),
-                  titlePosition: TitlePosition.top,
-                  unit: 'Liter',
-                  icon: const Icon(
-                    Icons.water_drop_outlined,
-                    color: Colors.blue,
-                  ),
-                  pointerColor: Colors.blue,
-                  decimalPlaces: 2,
-                  isAnimate: true,
-                  animationDuration: 1000,
-                  size: MediaQuery.of(context).size.width * .9,
+                child: LiquidLinearProgressIndicator(
+                  value: double.parse(_waterLevel), // Defaults to 0.5.
+                  valueColor: AlwaysStoppedAnimation(Colors
+                      .blue), // Defaults to the current Theme's accentColor.
+                  backgroundColor: Colors.grey
+                      .shade900, // Defaults to the current Theme's backgroundColor.
+                  borderColor: Colors.blue,
+                  borderWidth: 5.0,
+                  borderRadius: 12.0,
+                  direction: Axis
+                      .vertical, // The direction the liquid moves (Axis.vertical = bottom to top, Axis.horizontal = left to right). Defaults to Axis.horizontal.
+                  center: Text("${double.parse(_waterLevel) * 100} %"),
                 ),
               ),
       ),

@@ -28,7 +28,6 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
-  at_viz: ^0.0.2
   cupertino_icons: ^1.0.2
   dotted_line: ^3.1.0
   firebase_core: ^2.13.1
@@ -37,8 +36,8 @@ dependencies:
     sdk: flutter
   flutter_neumorphic: ^3.2.0
   get: ^4.6.5
+  liquid_progress_indicator: ^0.4.0
   neumorphic_button: ^0.0.1+2
-  water_bottle: ^0.0.7
 
 dev_dependencies:
   flutter_lints: ^2.0.0
